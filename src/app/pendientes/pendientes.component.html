@@ -1,0 +1,5 @@
+<h2>Tareas Pendientes</h2>
+<app-tarea *ngFor="let tarea of listadoTareas" [estaTarea]="tarea" (click)="finalizar(tarea)"></app-tarea>
+<div class="nuevaEntrada">
+<p>Título: </p><input type="text" [(ngModel)]="titulo"><p>Detalle: </p><input type="text" [(ngModel)]="detalle"><p>Fecha: </p><input type="date" [(ngModel)]="fecha"><button (click)="crearTarea()">Añadir</button>
+</div>
